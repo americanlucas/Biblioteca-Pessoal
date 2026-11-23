@@ -7,4 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".ListaLivrosActivity">
 
+    <!-- Cabeçalho no lugar da ActionBar (tema NoActionBar) -->
+    <TextView
+        android:id="@+id/txtCabecalho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/cor_primaria"
+        android:padding="16dp"
+        android:text="@string/titulo_lista"
+        android:textColor="@color/cor_texto_cabecalho"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 0dp: ocupa só o espaço entre cabeçalho e menu (RT06) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLivros"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCabecalho" />
+
+    <!-- Último filho: menu inferior fixo na base da tela -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bottom" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

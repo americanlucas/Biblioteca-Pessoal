@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="cor_primaria">#3F51B5</color>
+    <color name="cor_texto_cabecalho">#FFFFFF</color>
+    <color name="cor_texto_secundario">#757575</color>
+    <color name="cor_lido">#2E7D32</color>
+    <color name="cor_nao_lido">#E65100</color>
+    <color name="cor_divisor">#DDDDDD</color>
 </resources>

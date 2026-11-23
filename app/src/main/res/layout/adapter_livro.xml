@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- wrap_content: cada item ocupa só a própria altura -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/txtStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Dom Casmurro" />
+
+    <TextView
+        android:id="@+id/txtAutorAno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/cor_texto_secundario"
+        app:layout_constraintBottom_toTopOf="@id/divisor"
+        app:layout_constraintEnd_toEndOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="@id/txtTitulo"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        tools:text="Machado de Assis • 1899" />
+
+    <!-- Tag Lido / Não lido: texto e cor definidos no adapter -->
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/divisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Lido" />
+
+    <View
+        android:id="@+id/divisor"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/cor_divisor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

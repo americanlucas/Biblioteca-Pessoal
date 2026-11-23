@@ -1,3 +1,51 @@
 <resources>
     <string name="app_name">Biblioteca Pessoal</string>
+
+    <!-- Títulos das telas -->
+    <string name="titulo_lista">Meus Livros</string>
+    <string name="titulo_cadastro">Cadastro de Livro</string>
+    <string name="titulo_resumo">Resumo da Biblioteca</string>
+
+    <!-- Menu inferior -->
+    <string name="menu_livros">Livros</string>
+    <string name="menu_novo">Novo</string>
+    <string name="menu_resumo">Resumo</string>
+
+    <!-- Formulário -->
+    <string name="hint_titulo">Título do livro</string>
+    <string name="hint_autor">Autor</string>
+    <string name="hint_ano">Ano de publicação</string>
+    <string name="check_lido">Já li este livro</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_atualizar">Atualizar</string>
+
+    <!-- Item da lista -->
+    <string name="tag_lido">Lido</string>
+    <string name="tag_nao_lido">Não lido</string>
+    <string name="item_autor_ano">%1$s • %2$d</string>
+
+    <!-- Validação -->
+    <string name="erro_titulo_obrigatorio">Informe o título</string>
+    <string name="erro_autor_obrigatorio">Informe o autor</string>
+    <string name="erro_ano_obrigatorio">Informe o ano</string>
+    <string name="erro_ano_invalido">O ano deve estar entre 1450 e %1$d</string>
+
+    <!-- Feedback (Toast) -->
+    <string name="msg_salvo_sucesso">Livro salvo!</string>
+    <string name="msg_salvo_erro">Erro ao salvar o livro</string>
+    <string name="msg_atualizado_sucesso">Livro atualizado!</string>
+    <string name="msg_atualizado_erro">Erro ao atualizar o livro</string>
+    <string name="msg_excluido_sucesso">Livro excluído!</string>
+    <string name="msg_excluido_erro">Erro ao excluir o livro</string>
+
+    <!-- Diálogo de exclusão -->
+    <string name="dialog_excluir_titulo">Excluir livro</string>
+    <string name="dialog_excluir_msg">Deseja excluir \"%1$s\"?</string>
+    <string name="dialog_excluir">Excluir</string>
+    <string name="dialog_cancelar">Cancelar</string>
+
+    <!-- Resumo -->
+    <string name="resumo_total">Total de livros: %1$d</string>
+    <string name="resumo_lidos">Livros lidos: %1$d</string>
+    <string name="resumo_nao_lidos">Livros não lidos: %1$d</string>
 </resources>

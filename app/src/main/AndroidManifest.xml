@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BibliotecaPessoal">
         <activity
+            android:name=".CadastroLivroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResumoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListaLivrosActivity"
             android:exported="true">
             <intent-filter>
