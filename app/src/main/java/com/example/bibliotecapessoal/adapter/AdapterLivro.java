@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bibliotecapessoal.R;
+import com.google.android.material.card.MaterialCardView;
 import com.example.bibliotecapessoal.model.Livro;
 
 import java.util.List;
@@ -42,6 +43,9 @@ public class AdapterLivro extends RecyclerView.Adapter<AdapterLivro.MyViewHolder
         holder.txtStatus.setText(livro.isLido() ? R.string.tag_lido : R.string.tag_nao_lido);
         holder.txtStatus.setTextColor(ContextCompat.getColor(context,
                 livro.isLido() ? R.color.cor_lido : R.color.cor_nao_lido));
+        // Pílula da tag: fundo suave na mesma família de cor do texto
+        holder.cardStatus.setCardBackgroundColor(ContextCompat.getColor(context,
+                livro.isLido() ? R.color.cor_lido_fundo : R.color.cor_nao_lido_fundo));
     }
 
     @Override
@@ -64,12 +68,14 @@ public class AdapterLivro extends RecyclerView.Adapter<AdapterLivro.MyViewHolder
         TextView txtTitulo;
         TextView txtAutorAno;
         TextView txtStatus;
+        MaterialCardView cardStatus;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtTitulo = itemView.findViewById(R.id.txtTitulo);
             txtAutorAno = itemView.findViewById(R.id.txtAutorAno);
             txtStatus = itemView.findViewById(R.id.txtStatus);
+            cardStatus = itemView.findViewById(R.id.cardStatus);
         }
     }
 }

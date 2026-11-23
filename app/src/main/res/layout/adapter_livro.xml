@@ -1,57 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- wrap_content: cada item ocupa só a própria altura -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Cartão por livro: wrap_content para cada item ocupar só a própria altura -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/cor_superficie"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/cor_divisor"
+    app:strokeWidth="1dp">
 
-    <TextView
-        android:id="@+id/txtTitulo"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/txtStatus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Dom Casmurro" />
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/txtAutorAno"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="12dp"
-        android:textColor="@color/cor_texto_secundario"
-        app:layout_constraintBottom_toTopOf="@id/divisor"
-        app:layout_constraintEnd_toEndOf="@id/txtTitulo"
-        app:layout_constraintStart_toStartOf="@id/txtTitulo"
-        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
-        tools:text="Machado de Assis • 1899" />
+        <!-- Ícone decorativo em círculo (cartão com raio = metade do lado) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIcone"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:cardBackgroundColor="@color/cor_primaria_clara"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp">
 
-    <!-- Tag Lido / Não lido: texto e cor definidos no adapter -->
-    <TextView
-        android:id="@+id/txtStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/divisor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Lido" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_livros"
+                app:tint="@color/cor_primaria" />
+        </com.google.android.material.card.MaterialCardView>
 
-    <View
-        android:id="@+id/divisor"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/cor_divisor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/cor_texto_primario"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/txtAutorAno"
+            app:layout_constraintEnd_toStartOf="@id/cardStatus"
+            app:layout_constraintStart_toEndOf="@id/cardIcone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Dom Casmurro" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtAutorAno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/cor_texto_secundario"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/txtTitulo"
+            app:layout_constraintStart_toStartOf="@id/txtTitulo"
+            app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+            tools:text="Machado de Assis • 1899" />
+
+        <!-- Tag em pílula: fundo e cor do texto definidos no adapter -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp">
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Lido" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

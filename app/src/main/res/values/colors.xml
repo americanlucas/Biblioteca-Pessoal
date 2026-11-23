@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-
-    <color name="cor_primaria">#3F51B5</color>
+    <!-- Marca -->
+    <color name="cor_primaria">#4F46E5</color>
+    <color name="cor_primaria_clara">#E0E7FF</color>
     <color name="cor_texto_cabecalho">#FFFFFF</color>
-    <color name="cor_texto_secundario">#757575</color>
-    <color name="cor_lido">#2E7D32</color>
-    <color name="cor_nao_lido">#E65100</color>
-    <color name="cor_divisor">#DDDDDD</color>
+
+    <!-- Superfícies e texto -->
+    <color name="cor_fundo">#F5F6FA</color>
+    <color name="cor_superficie">#FFFFFF</color>
+    <color name="cor_texto_primario">#111827</color>
+    <color name="cor_texto_secundario">#6B7280</color>
+    <color name="cor_divisor">#E5E7EB</color>
+
+    <!-- Tags de status: texto forte sobre fundo suave -->
+    <color name="cor_lido">#15803D</color>
+    <color name="cor_lido_fundo">#DCFCE7</color>
+    <color name="cor_nao_lido">#C2410C</color>
+    <color name="cor_nao_lido_fundo">#FFEDD5</color>
 </resources>
