@@ -17,7 +17,7 @@ Provar no emulador cada critério da nota e entregar o `.zip` limpo, junto com o
 7. **Navegação:** os 3 itens do menu funcionam em todas as telas, e Voltar fecha o app.
 
 ## Auditoria de código (antes de zipar)
-Pedir ao agente uma busca no projeto por:
+Pedir ao Claude Code uma busca no projeto por:
 - [ ] `Toast.makeText(this, "` ou `setError("` → deve dar **0** resultados (RT07)
 - [ ] `android:text="` ou `android:hint="` sem `@string` → 0
 - [ ] `#` (cores) em layouts → 0
@@ -27,9 +27,9 @@ Pedir ao agente uma busca no projeto por:
 - [ ] `MainActivity` → 0
 
 ## Empacotamento
-1. **Build › Clean Project** e fechar o Android Studio e o Antigravity.
+1. **Build › Clean Project** e fechar o Android Studio e a sessão do Claude Code.
 2. Apagar as pastas `build/`, `app/build/` e `.gradle/`.
-3. Decidir sobre `.agent/` e `specs/`: incluir mostra o processo SDD, mas confirme com o professor se é permitido.
+3. Decidir sobre `CLAUDE.md` e `specs/`: incluir mostra o processo SDD, mas confirme com o professor se é permitido.
 4. Compactar a pasta do projeto em `.zip` e enviar junto com o vídeo.
 
 ## Critérios de aceite

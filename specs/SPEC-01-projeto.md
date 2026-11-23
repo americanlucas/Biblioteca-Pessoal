@@ -2,7 +2,7 @@
 
 - **Camada:** M (base)
 - **Depende de:** —
-- **Onde:** Android Studio (o template e o Refactor não existem no Antigravity)
+- **Onde:** Android Studio (o template e o Refactor só existem na IDE, não no Claude Code)
 
 ## Objetivo
 Criar o projeto Android vazio, já com a Activity LAUNCHER no nome certo e a estrutura de pacotes pronta.-

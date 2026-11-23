@@ -3,7 +3,7 @@
 - **Camada:** R
 - **Depende de:** SPEC-01
 - **Requisitos:** RT07
-- **Onde:** Antigravity (XML) + **Android Studio** (Vector Asset)
+- **Onde:** Claude Code (XML) + **Android Studio** (Vector Asset)
 
 ## Objetivo
 Centralizar todo texto e toda cor antes de qualquer tela existir. Assim nenhuma spec seguinte precisa escrever texto direto no código.

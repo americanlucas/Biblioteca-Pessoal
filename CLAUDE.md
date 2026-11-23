@@ -40,8 +40,9 @@ res/layout/activity_lista_livros.xml | activity_cadastro_livro.xml | activity_re
 - Ids de view em camelCase com prefixo do tipo (`edtTitulo`, `txtStatus`, `btnSalvar`, `chkLido`).
 - Nomes de strings e cores em snake_case, como estão definidos na SPEC-05.
 
-## Fluxo SDD (como o agente deve trabalhar)
-1. Implementar **uma spec por vez**, só na ordem do `specs/README.md`.
+## Fluxo SDD (como o Claude Code deve trabalhar)
+1. Implementar **uma spec por vez**, só na ordem do `README.md`.
 2. Alterar **apenas** os arquivos listados em "Arquivos" da spec atual. Se outro arquivo precisar mudar, parar e perguntar.
-3. Ao terminar, responder com: (a) lista de arquivos criados ou alterados; (b) o checklist de **Critérios de aceite** marcado; (c) qualquer desvio da spec e o motivo.
-4. Não começar a próxima spec sem aprovação do usuário.
+3. Ao terminar a implementação, compilar com `./gradlew assembleDebug` (na raiz do projeto). Se falhar, corrigir dentro dos arquivos da spec atual e compilar de novo; se a correção exigir outro arquivo, parar e perguntar. Uma spec só é considerada concluída com o build verde.
+4. Ao terminar, responder com: (a) lista de arquivos criados ou alterados; (b) o checklist de **Critérios de aceite** marcado; (c) o resultado do build; (d) qualquer desvio da spec e o motivo.
+5. Não começar a próxima spec sem aprovação do usuário.
