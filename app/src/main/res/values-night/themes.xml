@@ -13,5 +13,9 @@
         <item name="colorOutline">@color/cor_divisor</item>
         <item name="android:colorBackground">@color/cor_fundo</item>
         <item name="android:windowBackground">@color/cor_fundo</item>
+        <!-- Tipografia: estilos padrão de botão, checkbox e menu inferior -->
+        <item name="materialButtonStyle">@style/Botao.Principal</item>
+        <item name="bottomNavigationStyle">@style/MenuInferior</item>
+        <item name="checkboxStyle">@style/Caixa.Lido</item>
     </style>
 </resources>

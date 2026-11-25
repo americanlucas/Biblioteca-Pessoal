@@ -50,9 +50,7 @@
             android:layout_marginEnd="12dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textColor="@color/cor_texto_primario"
-            android:textSize="17sp"
-            android:textStyle="bold"
+            android:textAppearance="@style/Texto.TituloLivro"
             app:layout_constraintBottom_toTopOf="@id/txtAutorAno"
             app:layout_constraintEnd_toStartOf="@id/cardStatus"
             app:layout_constraintStart_toEndOf="@id/cardIcone"
@@ -64,9 +62,8 @@
             android:id="@+id/txtAutorAno"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:textColor="@color/cor_texto_secundario"
-            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/Texto.Secundario"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/txtTitulo"
             app:layout_constraintStart_toStartOf="@id/txtTitulo"
@@ -93,8 +90,7 @@
                 android:paddingTop="4dp"
                 android:paddingEnd="12dp"
                 android:paddingBottom="4dp"
-                android:textSize="12sp"
-                android:textStyle="bold"
+                android:textAppearance="@style/Texto.Tag"
                 tools:text="Lido" />
         </com.google.android.material.card.MaterialCardView>
 

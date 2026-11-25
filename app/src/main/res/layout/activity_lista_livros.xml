@@ -8,20 +8,17 @@
     android:background="@color/cor_fundo"
     tools:context=".ListaLivrosActivity">
 
-    <!-- Cabeçalho no lugar da ActionBar (tema NoActionBar) -->
+    <!-- Cabeçalho sem faixa: título solto sobre o fundo da tela -->
     <TextView
         android:id="@+id/txtCabecalho"
+        style="@style/Texto.Cabecalho"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/cor_primaria"
         android:paddingStart="24dp"
         android:paddingTop="28dp"
         android:paddingEnd="24dp"
-        android:paddingBottom="24dp"
+        android:paddingBottom="8dp"
         android:text="@string/titulo_lista"
-        android:textColor="@color/cor_texto_cabecalho"
-        android:textSize="28sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,13 +36,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtCabecalho" />
 
-    <!-- Último filho: menu inferior fixo na base da tela -->
+    <!-- Último filho: menu inferior fixo na base; visual vem do estilo MenuInferior -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/cor_superficie"
-        app:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

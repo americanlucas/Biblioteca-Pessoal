@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Paleta suave: tons dessaturados e fundo levemente quente (papel) -->
     <!-- Marca -->
-    <color name="cor_primaria">#4F46E5</color>
-    <color name="cor_primaria_clara">#E0E7FF</color>
+    <color name="cor_primaria">#6B72B8</color>
+    <color name="cor_primaria_clara">#F2F2F8</color>
     <color name="cor_texto_cabecalho">#FFFFFF</color>
 
     <!-- Superfícies e texto -->
-    <color name="cor_fundo">#F5F6FA</color>
-    <color name="cor_superficie">#FFFFFF</color>
-    <color name="cor_texto_primario">#111827</color>
-    <color name="cor_texto_secundario">#6B7280</color>
-    <color name="cor_divisor">#E5E7EB</color>
+    <color name="cor_fundo">#F8F7F4</color>
+    <color name="cor_superficie">#FFFEFC</color>
+    <color name="cor_texto_primario">#2E3142</color>
+    <color name="cor_texto_secundario">#7A7F8E</color>
+    <color name="cor_divisor">#ECEAE4</color>
 
     <!-- Tags de status: texto forte sobre fundo suave -->
-    <color name="cor_lido">#15803D</color>
-    <color name="cor_lido_fundo">#DCFCE7</color>
-    <color name="cor_nao_lido">#C2410C</color>
-    <color name="cor_nao_lido_fundo">#FFEDD5</color>
+    <color name="cor_lido">#3F7A58</color>
+    <color name="cor_lido_fundo">#EFF5F1</color>
+    <color name="cor_nao_lido">#A8673A</color>
+    <color name="cor_nao_lido_fundo">#FAF3EC</color>
 </resources>

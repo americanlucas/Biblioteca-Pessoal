@@ -8,25 +8,22 @@
     android:background="@color/cor_fundo"
     tools:context=".ResumoActivity">
 
-    <!-- Cabeçalho no lugar da ActionBar (tema NoActionBar) -->
+    <!-- Cabeçalho sem faixa: título solto sobre o fundo da tela -->
     <TextView
         android:id="@+id/txtCabecalho"
+        style="@style/Texto.Cabecalho"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/cor_primaria"
         android:paddingStart="24dp"
         android:paddingTop="28dp"
         android:paddingEnd="24dp"
-        android:paddingBottom="24dp"
+        android:paddingBottom="8dp"
         android:text="@string/titulo_resumo"
-        android:textColor="@color/cor_texto_cabecalho"
-        android:textSize="28sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Um cartão por número; textos preenchidos pela ResumoActivity (SPEC-11) -->
+    <!-- Total em largura cheia e grade 2x1 abaixo; textos preenchidos pela ResumoActivity (SPEC-11) -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -39,7 +36,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/cor_primaria_clara"
+            app:cardBackgroundColor="@color/cor_primaria"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:strokeWidth="0dp">
@@ -49,57 +46,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="24dp"
-                android:textColor="@color/cor_primaria"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textColor="@color/cor_texto_cabecalho"
+                android:textAppearance="@style/Texto.ResumoTotal" />
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
+        <!-- Grade de 2 colunas: pesos iguais dividem a largura entre lidos e não lidos -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/cor_lido_fundo"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
-            app:strokeWidth="0dp">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txtLidos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:textColor="@color/cor_lido"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/cor_lido"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/cor_nao_lido_fundo"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
-            app:strokeWidth="0dp">
+                <TextView
+                    android:id="@+id/txtLidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="120dp"
+                    android:padding="20dp"
+                    android:textColor="@color/cor_texto_cabecalho"
+                    android:textAppearance="@style/Texto.ResumoItem" />
+            </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:id="@+id/txtNaoLidos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:textColor="@color/cor_nao_lido"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/cor_nao_lido"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:id="@+id/txtNaoLidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="120dp"
+                    android:padding="20dp"
+                    android:textColor="@color/cor_texto_cabecalho"
+                    android:textAppearance="@style/Texto.ResumoItem" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Último filho: menu inferior fixo na base da tela -->
+    <!-- Último filho: menu inferior fixo na base; visual vem do estilo MenuInferior -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/cor_superficie"
-        app:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
